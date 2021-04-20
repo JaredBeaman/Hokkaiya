@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'Otsutome';
+    src: url('./fonts/OtsutomeFont_Ver3.ttf');
+  }
+
+body {
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-size: 16px;
+    color: #2C2C2C;
+}
+
+h1 {
+    font-family: Otsutome;
+    font-size: 1rem;
+    letter-spacing: .25vw;
+    margin: 0;
+}
+
+h1 b {
+    color: #E65C5C;
+}
+
+.meep {
+    padding: 0;
+    margin: 0;
+}
+
+#navbar {
+    height: 8vh;
+    box-shadow: 0px .1vh 1vh .1px #D6D6D6;
+    /* z-index: 1; */
+    background-color: rgb(255, 255, 255);
+}
+
+/* Hamburger Icon + Animation */
+#hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 5vw;
+    height: .25vh;
+    background-color: #333;
+    transition: 0.2s;
+  }
+
+  .bar1 {
+    margin-bottom: .25vh;
+  }
+
+  .bar2 {
+    height: .25vh;
+    margin: .25vh 0;
+  }
+
+  .bar3 {
+      margin-top: .25vh;
+  }
+
+  /* Rotate first bar */
+  .change .bar1 {
+    transform: translate(0, .75vh) rotate(-45deg);
+    /* -webkit-transform: rotate(-45deg); */
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    transform: translate(0, -.75vh) rotate(45deg);
+    /* -webkit-transform: rotate(45deg); */
+  }
+
+#spacer-xl {
+    height: 10vh;
+    width: 100%;
+    margin: 0;
+}
+
+#spacer-lg {
+    height: 8vh;
+    width: 100%;
+    margin: 0;
+}
+
+#spacer-sm {
+    height: 4vh;
+    width: 100%;
+    margin: 0;
+}
+
+#spacer-md {
+    height: 6vh;
+    width: 100%;
+    margin: 0;
+}
+
+ #dropdown {
+    width: 100%;
+    height: 0vh;
+    background-color: #2C2C2C;
+    transition: .25s;
+    margin: 0;
+  }
+
+#dropdown-container {
+    text-align: left;
+    color: white;
+    display: none;
+    transition: 1s; 
+}
+
+#splash {
+    margin: 0;
+    position: relative;
+}
+
+#splash-logo {
+    height: 30vw;
+    width: 70vw;
+    margin: 0;
+    padding: 0;
+    background-color: #2C2C2C;
+
+    position: absolute;
+    left: 15vw;
+    top: 35vw;
+
+    border-radius: 1vh;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#splash img {
+    padding: 0;
+    display: flex;
+    object-fit: cover;
+    height: 100vw;
+    width: 100vw;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+h2 {
+    font-family: Otsutome;
+    color: white;
+    font-size: 4rem;
+    margin: 0;
+    padding-top: 1.5vh;
+}
+
+h2 b {
+    color: #E65C5C;
+    font-size: 4rem;
+}
+
+h3 {
+    font-family: 'Sawarabi Mincho', sans-serif;
+    font-family: 1.5rem;
+    -webkit-text-stroke: .1vh #2C2C2C;
+    margin: 0;
+    letter-spacing: .15rem;
+    line-height: 2rem;
+
+}
+
+p {
+    letter-spacing: .1rem;
+    line-height: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+#about {
+    width: 100%;
+    margin: 0;
+}
