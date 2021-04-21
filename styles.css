@@ -7,6 +7,7 @@ body {
     font-family: 'Sawarabi Gothic', sans-serif;
     font-size: 16px;
     color: #2C2C2C;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -133,12 +134,38 @@ a {
     position: relative;
 }
 
+#gallery {
+    margin: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    overflow-x: auto;
+    /* overflow-y: hidden; */
+    scroll-snap-coordinate: 0 0;
+    scroll-snap-points-x: repeat(100vw);
+    scroll-snap-type: x mandatory;
+    flex: 1;
+    display:flex;
+    -webkit-overflow-scrolling: touch;
+
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+#gallery::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
 #splash-logo {
     height: 30vw;
     width: 70vw;
     margin: 0;
     padding: 0;
     background-color: #2C2C2C;
+    opacity: 0.95;
 
     position: absolute;
     left: 15vw;
@@ -158,8 +185,21 @@ a {
     object-fit: cover;
     height: 100vw;
     width: 100vw;
+    opacity: .8;
+    z-index: 1;
+}
+
+#gallery img {
+    padding: 0;
+    display: flex;
+    object-fit: cover;
     opacity: 0.8;
     z-index: 1;
+
+    width: calc(100vw/24*23);
+    height: 100vw;
+    flex:0 0 calc(100vw/24*23);
+    scroll-snap-align: start;
 }
 
 h2 {
@@ -177,17 +217,16 @@ h2 b {
 
 h3 {
     font-family: 'Sawarabi Mincho', sans-serif;
-    font-family: 1.5rem;
     -webkit-text-stroke: .1vh #2C2C2C;
     margin: 0;
     letter-spacing: .15rem;
-    line-height: 2rem;
+    line-height: 1.75rem;
 
 }
 
 p {
     letter-spacing: .1rem;
-    line-height: 2rem;
+    line-height: 1.75rem;
     padding: 0;
     margin: 0;
 }
